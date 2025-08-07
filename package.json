@@ -1,0 +1,35 @@
+{
+  "name": "diploma-truhanovich",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+  "test:unit": "jest tests/unit",
+  "test:ui": "npm run clean-allure && npx cypress run --env allure=true && npm run generate-allure",
+  "test:api": "jest tests/api",
+
+  "clean-allure": "rimraf allure-results allure-report",
+  "generate-allure": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PleD1k/diploma-Truhanovich.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PleD1k/diploma-Truhanovich/issues"
+  },
+  "homepage": "https://github.com/PleD1k/diploma-Truhanovich#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-playwright": "^3.3.2",
+    "cypress": "^14.5.3",
+    "cypress-iframe": "^1.0.1",
+    "jest": "^30.0.5",
+    "playwright": "^1.54.2",
+    "superagent": "^10.2.3"
+  }
+}
