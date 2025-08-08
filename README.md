@@ -78,6 +78,8 @@ npm run test:api
 Запуск UNIT тестов
 ```bash
 npm test:unit
+```
+
 ---
 
 <a id="generateAllureReport"></a>
