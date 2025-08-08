@@ -97,7 +97,7 @@ describe("UI тесты для сайта onliner.by", () => {
       homePage.openLoginForm();
 
       loginPage.fillLogin("неверный_логин");
-      loginPage.fillPassword("correct_password");
+      loginPage.fillPassword(Cypress.env('LOGIN_PASSWORD'));
       loginPage.submit();
 
       loginPage.getLoginError().should("contain.text", "Неверный логин или пароль");
@@ -106,7 +106,7 @@ describe("UI тесты для сайта onliner.by", () => {
     it("A correct login and an incorrect password shows an error", () => {
       homePage.openLoginForm();
 
-      loginPage.fillLogin("valid.user@example.com");
+      loginPage.fillLogin(Cypress.env('LOGIN_USERNAME'));
       loginPage.fillPassword("wrong_password");
       loginPage.submit();
 

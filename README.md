@@ -83,16 +83,6 @@ npm run test:api
 npm run generate-allure
 ```
 
----
-
-<a id="allureReport"></a>
-
-## 📑 Пример Allure отчета 
-
-![Allure-report](images/allure.png)
-
----
-
 <a id="author"></a>
 
 ## 👤 Автор 
