@@ -15,7 +15,7 @@ module.exports = defineConfig({
       return config;
     },
 
-    supportFile: 'src/support/command.js',
+    supportFile: 'tests/support/commands.js',
     specPattern: 'tests/ui/**/*.cy.{js,jsx,ts,tsx}',
     baseUrl: 'https://www.onliner.by',
     defaultCommandTimeout: 20000,
