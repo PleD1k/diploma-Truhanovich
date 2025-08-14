@@ -12,9 +12,9 @@ describe("UI тесты корзины и оформления заказа onli
   });
 
   it("Proceed to checkout and check the header", () => {
-    searchPage.enterSearchQuery("Наушники");
-    searchPage.waitForSearchResults("Наушники");
-    searchPage.openProductFromResults("Наушники");
+    searchPage.enterSearchQuery("Наушники Sony");
+    searchPage.waitForSearchResults("Наушники Sony");
+    searchPage.openProductFromResults("Наушники Sony");
 
     cy.origin("https://catalog.onliner.by", () => {
       class CatalogPage {
@@ -38,7 +38,7 @@ describe("UI тесты корзины и оформления заказа onli
           expect(Number(txt.trim())).to.be.greaterThan(0);
         });
     });
-
+    
     cy.origin("https://cart.onliner.by", () => {
       class CartPage {
         clickCheckoutButton() {
@@ -50,7 +50,7 @@ describe("UI тесты корзины и оформления заказа onli
         }
       }
       const cartPage = new CartPage();
-      
+
       cy.on("uncaught:exception", () => false);
       cy.visit("https://cart.onliner.by");
       cartPage.clickCheckoutButton();

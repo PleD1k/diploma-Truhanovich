@@ -7,8 +7,6 @@ Cypress.Commands.add('acceptCookies', () => {
       if ($btn.length && $btn.is(':visible')) {
         return cy.wrap($btn.first()).click();
       }
-      cy.log('Cookie-banner не найден или уже закрыт, продолжаем');
-      return Cypress.Promise.resolve();
     })
     .then(() => cy.document().its('readyState').should('eq', 'complete').wait(1000));
 });
