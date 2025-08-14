@@ -50,9 +50,8 @@ describe("UI тесты корзины и оформления заказа onli
         }
       }
       const cartPage = new CartPage();
-
+      
       cy.on("uncaught:exception", () => false);
-
       cy.visit("https://cart.onliner.by");
       cartPage.clickCheckoutButton();
       cy.url().should("eq", "https://cart.onliner.by/order");
